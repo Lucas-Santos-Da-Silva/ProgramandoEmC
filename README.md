@@ -100,4 +100,22 @@ int main(){
     printf("O preço do valor do produto com desconto de %2.2f é %2.2f\n",ver_desconto,resultado);
     return 0;
 }
+
+```
+#### parimpar 
+```C
+#include <stdio.h>
+
+int main (){
+int num;
+printf("Digite um número: \n");
+scanf ("%d",&num);
+if(num%2==0){
+  printf("Digite um número é par\n");  
+}
+else{
+  printf("Digite um número é impar\n");    
+}
+return 0;
+}
 ```
