@@ -102,7 +102,7 @@ int main(){
 }
 
 ```
-#### parimpar 
+#### parimpar.c
 ```C
 #include <stdio.h>
 
@@ -119,7 +119,7 @@ else{
 return 0;
 }
 ```
-#### notaMedia
+#### notaMedia.c
 ```C
 /*Neste programa iremos calcular a nota média do aluno. Teremos a entrada de 4 notas, depois será feito o cálculo da média, onde iremos somar as notas e depois dividir por 4.
 Se o aluno tiver uma média acima ou igual 7, estará aprovado, caso o aluno tenha uma nota menor ou igual que quatro, então o aluno estará reprovado; caso contrário, estará em recuperação*/
@@ -150,7 +150,7 @@ int main(){
 
 }
 ```
-#### bisexto
+#### bisexto.c
 ```C
 #include<stdio.h>
 int main(){
@@ -165,4 +165,22 @@ int main(){
         printf("Este não é um ano bisextal!\n");
     }
 }
+```
+#### while_dec_bin.c
+```C
+#include <stdio.h>
+int main(){
+   int dec=24;
+   int resto=0;
+   int pos=1;
+   int rs=0;
+   while(dec>0){
+    resto=dec%2;
+    dec=dec/2;
+    rs=rs+pos*resto;
+    pos=pos*10;
+   }
+   printf("%d\n",rs);
+    return 0;
+} 
 ```
