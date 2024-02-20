@@ -184,3 +184,133 @@ int main(){
     return 0;
 } 
 ```
+#### for1.c
+```C
+#include<stdio.h>
+
+int main(){
+    int x;
+    for(x=1;x<=10;x++){
+        printf("%d\n",x);
+    }
+return 0;
+}
+```
+#### colecoesiguais.c
+```C
+#include <stdio.h>
+int main(){
+    int c1[10]={10,5,68,8,47,12,54,13,62,11};
+    int c2[15]={11,5,62,112,84,76,12,55,59,85,13,0,14,19,18};
+    for(int i=0;i<10;i++){
+        for(int k=0;k<15;k++){
+            if(c1[i]==c2[k]){
+            printf("%d\n", c1[i]);
+            }
+        }
+    }
+    return 0;
+}
+```
+#### colecao1.c
+```C
+// Array é um conjunto de dados sobre um determinado
+// assunto. Podemos falar de valores numéricos, textos,
+// datas, ou objetos
+#include <stdio.h>
+int main(){
+    int valores [5] = {10,5,8,12,7};
+    printf("%d\n",valores[0]);
+    return 0;
+}
+```
+#### colecao2.c
+```C
+#include <stdio.h>
+int main(){
+    int loud[10]={1,21,11,8,19,45,7,24,26,18};
+    int soma=0,media=0,i;
+    for(i=0;i<=9;i++){
+        soma+=loud[i];
+    }
+    printf("O resultado da soma é %d\n",soma);
+    for(i=0;i<10;i++){
+        media+=loud[i];
+    }
+    printf("O resultado da media é %d\n",(media/10));
+    for(i=0;i<10;i++){
+        if(loud[i]%2==0){
+         printf("%d\n",loud[i]);
+        }
+    }
+    
+    return 0;
+}
+```
+#### baseexponente.c
+```C
+#include<stdio.h>
+int main(){
+float base,exp,i,b;
+printf("Digite a base:\n");
+scanf("%f",&base);
+printf("Digite o expoente:\n");
+scanf("%f", &exp);
+b=base;
+for(i=1;i<exp;i++){
+    base*=b;
+}
+printf("%2.2f\n",base); 
+return 0;
+}
+```
+#### tabuada.c
+```C
+#include<stdio.h>
+int main(){
+int num,num2;
+printf("Digite um número para a tabuada:\n");
+scanf("%d",&num);
+for(num2=1;num2<=10;num2++){
+    printf("%dx%d=%d\n",num,num2,(num*num2)); 
+}
+return 0;
+}
+```
+#### whilebisexto.c
+```C
+#include <stdio.h>
+int main(){
+    int ano=1950;
+    int qtd=0;
+    int currentYear=2024;
+    int naobisexto=0;
+    printf("Digite o ano atual\n");
+    scanf("%d",&currentYear);
+    printf("Digite o ano inicial de onde você deseja verificar\n");
+    scanf("%d",&ano);
+    while(ano<=currentYear){
+        if(ano%4==0){
+            printf("O ano %d é bisexto\n",ano);
+            qtd++;
+        }
+       ano++;
+    }
+    naobisexto=ano-qtd;
+    printf("Temos %d anos bisexto\n",qtd);
+    printf("Temos %d anos não bisexto\n",naobisexto);
+    return 0;
+} 
+```
+#### while1.c
+```C
+#include <stdio.h>
+int main(){
+    int i=0;
+    while(i<=10){
+        printf("%d\n",i);
+        i++;
+    }
+    return 0;
+} 
+```
