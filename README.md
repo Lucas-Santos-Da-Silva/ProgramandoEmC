@@ -390,3 +390,76 @@ int main(){
     
 }
 ```
+#### malloc1.c
+```C
+#include <stdio.h>
+#include <stdlib.h>
+
+int main (){
+int *ptr_int;
+ptr_int = (int *)malloc(sizeof(int));
+if(ptr_int==NULL){
+    printf("erro ao tentar aloca mempria\n");
+    return 1; //para a execução do programa
+}
+printf("Digite um número: \n");
+scanf("%d", ptr_int);
+printf("O valor digitado é %d e ele está em %p\n",*ptr_int, ptr_int);
+free(ptr_int);
+return 0;
+}
+```
+#### malloc2.c
+```C
+#include <stdio.h>
+#include <stdlib.h>
+
+int main (){
+int *array;
+int tamanho=5;
+array = (int *)malloc(tamanho * sizeof(int));
+if(array==NULL){
+    printf("erro ao tentar aloca mempria\n");
+    return 1; //para a execução do programa
+}
+for (int i=0; i<tamanho; i++){
+    array[i]= i+1;
+}
+printf("exibindo os dados do array");
+for (int j=0; j<tamanho; j++){
+    printf("%d -",array[j]);
+}
+free(array);
+return 0;
+}
+```
+#### arquivo.c
+```C
+#include<stdio.h>
+int main (){
+    FILE *arquivo;
+    char texto[100];
+    //Abre o arquivo para escrita 
+    arquivo = fopen ("exemplo.txt", "w");
+    if (arquivo == NULL){
+        printf("erro ao abrir o arquivo.\n");
+    return 1;
+    }
+    //Escreve no arquivo
+    fprintf(arquivo, "Olá, este é um exemplo de manipulação de arquivos em C.");
+    //Fecha o arquvi
+    fclose(arquivo);
+    //Abre o arquivo para leitura
+    arquivo=fopen("exemplo.txt", "r");
+    if (arquivo == NULL){
+        printf("Erro ao abrir o arquivo.\n");
+        return 1;
+    }
+    // Lê o conteúdo do arquivo e imprime na tela 
+    fgets(texto, 100, arquivo);
+    printf("Conteúdo do arquivo: %s\n", texto);
+    //Fecha o arquivo
+    fclose(arquivo);
+    return 0;
+}
+```
